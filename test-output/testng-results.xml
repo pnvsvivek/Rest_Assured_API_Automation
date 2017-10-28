@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="26139" started-at="2017-10-28T10:23:15Z" finished-at="2017-10-28T10:23:41Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="26139" started-at="2017-10-28T10:23:15Z" finished-at="2017-10-28T10:23:41Z">
+      <class name="testCases.MyTests">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testCases.MyTests@6e1567f1]" name="launchBrowser" is-config="true" duration-ms="10509" started-at="2017-10-28T15:53:15Z" finished-at="2017-10-28T15:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="sum()[pri:0, instance:testCases.MyTests@6e1567f1]" name="sum" duration-ms="15574" started-at="2017-10-28T15:53:25Z" finished-at="2017-10-28T15:53:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sum -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.MyTests@6e1567f1]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-10-28T15:53:41Z" finished-at="2017-10-28T15:53:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.MyTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
