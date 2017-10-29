@@ -5,9 +5,9 @@
     <classes>
       <class name="testCases.MyTests">
         <methods>
-          <include name="tearDown"/>
-          <include name="sum"/>
           <include name="launchBrowser"/>
+          <include name="checkResults"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.MyTests -->
     </classes>

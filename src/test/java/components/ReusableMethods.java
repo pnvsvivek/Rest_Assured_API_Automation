@@ -3,8 +3,12 @@ package components;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
+import java.util.*;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,11 +17,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ReusableMethods {
 	
-	/*public static void main(String args[]) throws IOException
+	public static void main(String args[]) throws IOException
 	{
 		ReusableMethods reuse = new ReusableMethods();
-		System.out.println("text is "+reuse.getProperties("searchText"));
-	}*/
+		HashMap<String,String> hm = new HashMap<String, String>();
+		hm = reuse.readExcel(0);
+		System.out.println("text is "+hm.get("SearchText"));
+	}
 
 	public WebDriver selectBrowser(String browser)
 	{
@@ -52,5 +58,57 @@ public class ReusableMethods {
 		Properties prop = new Properties();
 		prop.load(fis);
 		return prop.getProperty(key);
+	}
+	
+	@SuppressWarnings("resource")
+	public HashMap<String,String> readExcel(int index) throws IOException
+	{
+		String filePath = "C:\\Users\\p.nvs.vivek\\workspace\\com.test.RestAssured\\files\\TD.xlsx";
+		String sheetName = "data";
+		List<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
+		FileInputStream fis = new FileInputStream(filePath);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet sh = wb.getSheet(sheetName);
+		int rd = sh.getLastRowNum()-sh.getFirstRowNum();
+		for(int i=1;i<=rd;i++)
+		{
+			HashMap<String, String> hm = new HashMap<String, String>();
+			Row row = sh.getRow(i);
+			if(row!=null)
+			{
+				for(int j=0;j<row.getLastCellNum();j++)
+				{
+				hm.put(sh.getRow(0).getCell(j).toString(), row.getCell(j).toString());
+				}
+			}
+			list.add(hm);
+		}
+		return list.get(index);
+	}
+	
+	@SuppressWarnings("resource")
+	public List<HashMap<String,String>> readExcel() throws IOException
+	{
+		String filePath = "C:\\Users\\p.nvs.vivek\\workspace\\com.test.RestAssured\\files\\TD.xlsx";
+		String sheetName = "data";
+		List<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
+		FileInputStream fis = new FileInputStream(filePath);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet sh = wb.getSheet(sheetName);
+		int rd = sh.getLastRowNum()-sh.getFirstRowNum();
+		for(int i=1;i<=rd;i++)
+		{
+			HashMap<String, String> hm = new HashMap<String, String>();
+			Row row = sh.getRow(i);
+			if(row!=null)
+			{
+				for(int j=0;j<row.getLastCellNum();j++)
+				{
+				hm.put(sh.getRow(0).getCell(j).toString(), row.getCell(j).toString());
+				}
+			}
+			list.add(hm);
+		}
+		return list;
 	}
 }

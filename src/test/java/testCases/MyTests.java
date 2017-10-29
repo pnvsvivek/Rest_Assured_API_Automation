@@ -1,7 +1,7 @@
 package testCases;
 
 import java.io.IOException;
-
+import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,23 +12,25 @@ import org.testng.annotations.Test;
 import components.ReusableMethods;
 import pageObjects.HomePage;
 
-public class MyTests {
-
+public class MyTests{
+	
 	WebDriver driver;
 	ReusableMethods reuse = new ReusableMethods();
+	HashMap<String, String> hm = new HashMap<String, String>();
 	@BeforeMethod
-	public void launchBrowser()
+	public void launchBrowser() throws IOException
 	{
-		driver = reuse.selectBrowser("chrome");
+		hm = reuse.readExcel(0);
+		driver = reuse.selectBrowser(hm.get("browser"));
 	}
 	@Test
-	public void sum() throws InterruptedException, IOException
+	public void checkResults() throws InterruptedException, IOException
 	{
 		HomePage homePage = new HomePage(driver);
 		driver.get(reuse.getProperties("url"));
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.visibilityOf(homePage.searchBox));
-		homePage.searchBox.sendKeys(reuse.getProperties("searchText"));
+		homePage.searchBox.sendKeys(hm.get("SearchText"));
 		wait.until(ExpectedConditions.elementToBeClickable(homePage.searchButton));
 		homePage.searchButton.click();
 		if(homePage.resultLinks.size()!=0)
@@ -39,7 +41,8 @@ public class MyTests {
 		{
 			System.out.println("No Results");
 		}
-	}
+	}	
+	
 	@AfterMethod
 	public void tearDown()
 	{

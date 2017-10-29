@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="31877" started-at="2017-10-28T10:38:50Z" finished-at="2017-10-28T10:39:22Z">
+  <suite name="Suite" duration-ms="25740" started-at="2017-10-29T08:30:35Z" finished-at="2017-10-29T08:31:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="31877" started-at="2017-10-28T10:38:50Z" finished-at="2017-10-28T10:39:22Z">
+    <test name="Test" duration-ms="25740" started-at="2017-10-29T08:30:35Z" finished-at="2017-10-29T08:31:01Z">
       <class name="testCases.MyTests">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testCases.MyTests@7c0e2abd]" name="launchBrowser" is-config="true" duration-ms="12788" started-at="2017-10-28T16:08:50Z" finished-at="2017-10-28T16:09:03Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testCases.MyTests@2ef5e5e3]" name="launchBrowser" is-config="true" duration-ms="15638" started-at="2017-10-29T14:00:35Z" finished-at="2017-10-29T14:00:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="sum()[pri:0, instance:testCases.MyTests@7c0e2abd]" name="sum" duration-ms="16564" started-at="2017-10-28T16:09:03Z" finished-at="2017-10-28T16:09:19Z">
+        <test-method status="PASS" signature="checkResults()[pri:0, instance:testCases.MyTests@2ef5e5e3]" name="checkResults" duration-ms="8143" started-at="2017-10-29T14:00:51Z" finished-at="2017-10-29T14:00:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sum -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.MyTests@7c0e2abd]" name="tearDown" is-config="true" duration-ms="2418" started-at="2017-10-28T16:09:19Z" finished-at="2017-10-28T16:09:22Z">
+        </test-method> <!-- checkResults -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.MyTests@2ef5e5e3]" name="tearDown" is-config="true" duration-ms="1832" started-at="2017-10-29T14:00:59Z" finished-at="2017-10-29T14:01:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
