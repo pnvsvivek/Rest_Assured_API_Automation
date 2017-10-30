@@ -1,3 +1,4 @@
+testCases\APITests.class
 components\ReusableMethods.class
 testCases\MyTests.class
 pageObjects\HomePage.class

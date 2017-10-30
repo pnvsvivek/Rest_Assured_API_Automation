@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23337" started-at="2017-10-29T08:25:13Z" finished-at="2017-10-29T08:25:37Z">
+  <suite name="Suite" duration-ms="69239" started-at="2017-10-30T17:23:12Z" finished-at="2017-10-30T17:24:21Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="23337" started-at="2017-10-29T08:25:13Z" finished-at="2017-10-29T08:25:37Z">
+    <test name="Test" duration-ms="69239" started-at="2017-10-30T17:23:12Z" finished-at="2017-10-30T17:24:21Z">
+      <class name="testCases.APITests">
+        <test-method status="PASS" signature="myFirstAPITest1()[pri:0, instance:testCases.APITests@55d56113]" name="myFirstAPITest1" duration-ms="6874" started-at="2017-10-30T22:53:48Z" finished-at="2017-10-30T22:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myFirstAPITest1 -->
+        <test-method status="PASS" signature="myFirstAPITest2()[pri:0, instance:testCases.APITests@55d56113]" name="myFirstAPITest2" duration-ms="4144" started-at="2017-10-30T22:53:55Z" finished-at="2017-10-30T22:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myFirstAPITest2 -->
+        <test-method status="PASS" signature="myFirstAPITest3()[pri:0, instance:testCases.APITests@55d56113]" name="myFirstAPITest3" duration-ms="20111" started-at="2017-10-30T22:53:59Z" finished-at="2017-10-30T22:54:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myFirstAPITest3 -->
+        <test-method status="PASS" signature="myFirstAPITest4()[pri:0, instance:testCases.APITests@55d56113]" name="myFirstAPITest4" duration-ms="1895" started-at="2017-10-30T22:54:19Z" finished-at="2017-10-30T22:54:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myFirstAPITest4 -->
+      </class> <!-- testCases.APITests -->
       <class name="testCases.MyTests">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testCases.MyTests@64bfbc86]" name="launchBrowser" is-config="true" duration-ms="13936" started-at="2017-10-29T13:55:14Z" finished-at="2017-10-29T13:55:27Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testCases.MyTests@64bf3bbf]" name="launchBrowser" is-config="true" duration-ms="12702" started-at="2017-10-30T22:53:12Z" finished-at="2017-10-30T22:53:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="checkResults()[pri:0, instance:testCases.MyTests@64bfbc86]" name="checkResults" duration-ms="8345" started-at="2017-10-29T13:55:27Z" finished-at="2017-10-29T13:55:36Z">
+        <test-method status="PASS" signature="checkResults()[pri:0, instance:testCases.MyTests@64bf3bbf]" name="checkResults" duration-ms="22879" started-at="2017-10-30T22:53:25Z" finished-at="2017-10-30T22:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResults -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.MyTests@64bfbc86]" name="tearDown" is-config="true" duration-ms="968" started-at="2017-10-29T13:55:36Z" finished-at="2017-10-29T13:55:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.MyTests@64bf3bbf]" name="tearDown" is-config="true" duration-ms="535" started-at="2017-10-30T22:53:47Z" finished-at="2017-10-30T22:53:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

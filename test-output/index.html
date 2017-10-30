@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,26 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.MyTests" hash-for-method="checkResults">checkResults</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.APITests" hash-for-method="myFirstAPITest1">myFirstAPITest1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.APITests" hash-for-method="myFirstAPITest2">myFirstAPITest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.APITests" hash-for-method="myFirstAPITest3">myFirstAPITest3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.APITests" hash-for-method="myFirstAPITest4">myFirstAPITest4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -117,6 +137,42 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.APITests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="myFirstAPITest1">
+                  </a> <!-- myFirstAPITest1 -->
+                  <span class="method-name">myFirstAPITest1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="myFirstAPITest2">
+                  </a> <!-- myFirstAPITest2 -->
+                  <span class="method-name">myFirstAPITest2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="myFirstAPITest3">
+                  </a> <!-- myFirstAPITest3 -->
+                  <span class="method-name">myFirstAPITest3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="myFirstAPITest4">
+                  </a> <!-- myFirstAPITest4 -->
+                  <span class="method-name">myFirstAPITest4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -145,6 +201,7 @@
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.MyTests&quot;/&gt;
+      &lt;class name=&quot;testCases.APITests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -158,7 +215,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +241,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkResults')
 data.setCell(0, 2, 'testCases.MyTests')
-data.setCell(0, 3, 8345);
+data.setCell(0, 3, 22879);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'myFirstAPITest3')
+data.setCell(1, 2, 'testCases.APITests')
+data.setCell(1, 3, 20111);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'myFirstAPITest1')
+data.setCell(2, 2, 'testCases.APITests')
+data.setCell(2, 3, 6874);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'myFirstAPITest2')
+data.setCell(3, 2, 'testCases.APITests')
+data.setCell(3, 3, 4144);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'myFirstAPITest4')
+data.setCell(4, 2, 'testCases.APITests')
+data.setCell(4, 3, 1895);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -226,12 +299,31 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkResults</span>
-                <span class="method-start">13936 ms</span>
+                <span class="method-start">12702 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22284 ms</span>
+                <span class="method-start">35585 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.APITests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">myFirstAPITest1</span>
+                <span class="method-start">36123 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">myFirstAPITest2</span>
+                <span class="method-start">43011 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">myFirstAPITest3</span>
+                <span class="method-start">47157 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">myFirstAPITest4</span>
+                <span class="method-start">67271 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
